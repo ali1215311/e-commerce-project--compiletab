@@ -1,4 +1,5 @@
 import { IoMdClose } from "react-icons/io";
+import CartContent from "../Cart/CartContent";
 
 const CartDrawer = ({ isCartOpen, onToggleCart }) => {
   return (
@@ -19,6 +20,8 @@ const CartDrawer = ({ isCartOpen, onToggleCart }) => {
       <div className="p-4">
         <h2 className="text-xl font-semibold mb-4">Your Cart</h2>
       </div>
+      {/* Cart Contents */}
+      <CartContent />
       {/* Checkout button fixed at bottom */}
       <div className="fixed bottom-0 w-full p-4">
         <button className="w-full bg-gray-800 text-gray-200 py-3 rounded font-semibold cursor-pointer">
