@@ -75,7 +75,7 @@ const Navbar = () => {
         </div>
         {/* Menu Items Mobile responsive */}
         <div
-          className={`md:hidden absolute top-0 left-0 w-1/2 h-full bg-white shadow-2xl transform transition-transform duration-300 ${
+          className={`md:hidden fixed top-0 left-0 w-1/2 h-full bg-white shadow-2xl transform transition-transform duration-300 z-50 ${
             isMenuOpen ? "translate-x-0" : "-translate-x-full"
           }`}
         >
