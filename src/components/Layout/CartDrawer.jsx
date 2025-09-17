@@ -4,7 +4,7 @@ import CartContent from "../Cart/CartContent";
 const CartDrawer = ({ isCartOpen, onToggleCart }) => {
   return (
     <div
-      className={`fixed top-0 right-0 w-3/4 sm:w-1/2 md:w-1/4 bg-white z-50 h-full shadow-lg transform transition-transform duration-300 ${
+      className={`fixed top-0 right-0 w-3/4 sm:w-1/2 md:w-96 bg-white z-50 h-full shadow-lg transform transition-transform duration-300 ${
         isCartOpen ? "translate-x-0" : "translate-x-full"
       }`}
     >
