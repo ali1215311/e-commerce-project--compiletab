@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { toast } from "sonner";
+import ProductGrid from "./ProductGrid";
 
 const selectedProduct = {
   brand: "FashionBrand",
@@ -21,6 +22,33 @@ const selectedProduct = {
     },
   ],
 };
+
+const similarProducts = [
+  {
+    _id: 1,
+    name: "Product 1",
+    price: 100,
+    images: [{ url: "https://picsum.photos/500/500?random=3" }],
+  },
+  {
+    _id: 2,
+    name: "Product 2",
+    price: 150,
+    images: [{ url: "https://picsum.photos/500/500?random=4" }],
+  },
+  {
+    _id: 3,
+    name: "Product 3",
+    price: 200,
+    images: [{ url: "https://picsum.photos/500/500?random=5" }],
+  },
+  {
+    _id: 4,
+    name: "Product 4",
+    price: 250,
+    images: [{ url: "https://picsum.photos/500/500?random=6" }],
+  },
+];
 
 const ProductDetails = () => {
   const [selectedImg, setSelectedImg] = useState(
@@ -51,6 +79,7 @@ const ProductDetails = () => {
   return (
     <div>
       <div className="max-w-6xl mx-auto bg-white p-8 rounded-lg">
+        {/* Best Seller */}
         <div className="flex flex-col md:flex-row gap-4">
           {/* Image with thumbnail */}
           <div className="md:w-1/2 flex flex-col-reverse md:flex-row">
@@ -176,6 +205,13 @@ const ProductDetails = () => {
               </table>
             </div>
           </div>
+        </div>
+        {/* You may also like */}
+        <div className="mt-16">
+          <h3 className="text-center font-semibold text-2xl">
+            You may also Like
+          </h3>
+          <ProductGrid products={similarProducts} />
         </div>
       </div>
     </div>
